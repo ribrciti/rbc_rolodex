@@ -1,0 +1,78 @@
+<%= link_to "Contacts", root_path %>
+<%= link_to "Edit Contact", edit_name_path(@name) %>
+<%= link_to "Delete", name_path(@name), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<div class="names-show">
+  <h2>Current Contact</h2>
+  <table>
+    <tr>
+      <td>First Name</td>
+      <th><%= @name.first_name %></th>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <th><%= @name.last_name %></th>
+    </tr>
+    <tr>
+      <td>MI</td>
+      <th><%= @name.middle_initial %></th>
+    </tr>
+    <br>
+
+    <tr>
+      <td>Address 1</td>
+      <th><%= @name.address_1 %></th>
+    </tr>
+    <tr>
+      <td>Address 2</td>
+      <th><%= @name.address_2 %></th>
+    </tr>
+    <tr>
+      <td>City</td>
+      <th><%= @name.city %></th>
+    </tr>
+    <tr>
+      <td>State</td>
+      <th><%= @name.state_name %></th>
+    </tr>
+    <tr>
+      <td>ABBR</td>
+      <th><%= @name.state_abbr %></th>
+    </tr>
+    <tr>
+      <td>Zip Code</td>
+      <th><%= @name.zip_code %></th>
+    </tr>      
+    <tr>
+      <td>Country</td>
+      <th><%= @name.country %></th>
+    </tr>
+    <br>
+
+    <tr>
+      <td>Home Phone</td>
+      <th><%= @name.home_phone %></th>
+    </tr>
+    <tr>
+      <td>Cell Phone</td>
+      <th><%= @name.cell_phone %></th>
+    </tr>    
+    <tr>
+      <td>Email</td>
+      <th><%= @name.email %></th>
+    </tr>
+    <br>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @name.created_at.strftime("%b %e %Y %l %m %M %p ") %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @name.updated_at.strftime("%b %e %Y %l %m %M %p ") %></td>
+    </tr>
+
+  </table>
+
+
+</div>

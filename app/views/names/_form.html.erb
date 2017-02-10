@@ -1,0 +1,63 @@
+<h2>Create new Contact</h2>
+
+<%= form_for @name, :html => {class: "form-horizontal", role: "form"} do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label(:first_name, "First name") %></th>
+      <td><%= f.text_field(:first_name) %></td>
+    </tr>
+     <tr>
+      <th><%= f.label(:last_name, "Last Name") %></th>
+      <td><%= f.text_field(:last_name) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:middle_initial, "MI") %></th>
+      <td><%= f.text_field(:middle_initial) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:address_1, "Address 1") %></th>
+      <td><%= f.text_field(:address_1) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:address_2, "Address 2") %></th>
+      <td><%= f.text_field(:address_2) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:city, "City") %></th>
+      <td><%= f.text_field(:city) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:state_name, "State") %></th>
+      <td><%= f.text_field(:state_name) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:state_abbr, "ABBR") %></th>
+      <td><%= f.text_field(:state_abbr) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:zip_code, "Zip") %></th>
+      <td><%= f.text_field(:zip_code) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:country, "Country") %></th>
+      <td><%= f.text_field(:country) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:home_phone, "Home Phone") %></th>
+      <td><%= f.text_field(:home_phone) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:cell_phone, "Cell Phone") %></th>
+      <td><%= f.text_field(:cell_phone) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:email, "Email") %></th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>  
+
+  </table>
+<div>
+  <%= submit_tag("Submit") %>
+</div>
+
+<% end %>
